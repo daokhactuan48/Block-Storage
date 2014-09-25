@@ -138,7 +138,26 @@ CINDER_DBPASS: là pass của cinder trên database
 
 CINDER_PASS: pass của user cinder trong keystone
 
-RABBIT_PASS: pass của RABIIT
+RABBIT_PASS: pass của RABBIT
+
+
+e. Tiến hành Migrate volume giữa các máy
+
+- Liệt các back-end của máy:
+    cinder-manage host list
+
+- Thực hiện lệnh sau để kiểm tra xem volume nằm trên máy nào:
+
+    cinder show <ID>
+  
+- Lệnh Migrate volume giữa các máy\
+
+  cinder migrate <ID_volume> <host>
+
+Chú ý: 
+
+
+
 
 
 
