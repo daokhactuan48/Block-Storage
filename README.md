@@ -1,7 +1,7 @@
 Block-Storage
 =============
 
-Tổng quan các tính năng của Cinder
+
 
 # 1.Giới Thiệu Về Block Storage trong Openstack
   
@@ -78,20 +78,20 @@ Có 2 trường hợp của volume:
 
 ##### 2.5.2. Mô hình bài lab.
    
-   a. Mục tiêu bài lab: 
+a. Mục tiêu bài lab: 
 
   - Chuyển volume giữa các back-end
 
-   b. Thông tin bài lab:
+b. Thông tin bài lab:
   
   - Back-end sử dụng là LVM
   - Một máy cài openstack all in one và một máy cài cinder-volume. 
 
-   c. Mô hình 
+c. Mô hình 
    
-   <img src=http://i.imgur.com/cpHAiYI.jpg width="60%" height="60%" border="1">
+  <img src=http://i.imgur.com/cpHAiYI.jpg width="60%" height="60%" border="1">
   
-   d. Các bước cài đặt
+d. Các bước cài đặt
    
    
 
