@@ -155,13 +155,13 @@ e. Tiến hành Migrate volume giữa các máy
 
 - Thực hiện lệnh sau để kiểm tra xem volume nằm trên máy nào:
 
-    cinder show <ID_Volume>
+    cinder show ID_Volume
     
 <img src=http://i.imgur.com/Zz0dGFr.png width="60%" height="60%" border="1">
   
 - Lệnh Migrate volume giữa các máy
 
-    cinder migrate <ID_volume> <host>
+   cinder migrate ID_volume host
     
 - Sử dụng cinder show <ID_Volume> để xem trạng thái migrating:
 
