@@ -67,7 +67,7 @@ Tổng quan các tính năng của Cinder
   
 #### 2.5. Tính năng Migrate volume.
 
-### 2.5.1. Giới Thiệu
+##### 2.5.1. Giới Thiệu
    
   - Trong Openstack có khả năng di chuyển volume từ giữa các back-end
   
@@ -76,7 +76,7 @@ Có 2 trường hợp của volume:
   - Volume ko được attach vào máy ảo.
   - Volume được attach vào máy ảo.
 
-### 2.5.2. Mô hình bài lab.
+##### 2.5.2. Mô hình bài lab.
    
    a. Mục tiêu bài lab: 
 
