@@ -134,7 +134,9 @@ B4: Cấu hình file sau: /etc/cinder/cinder.conf
 
 Chú ý: 
 CINDER_DBPASS: là pass của cinder trên database
+
 CINDER_PASS: pass của user cinder trong keystone
+
 RABBIT_PASS: pass của RABIIT
 
 
