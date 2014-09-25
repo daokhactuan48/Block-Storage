@@ -144,17 +144,38 @@ RABBIT_PASS: pass của RABBIT
 e. Tiến hành Migrate volume giữa các máy
 
 - Liệt các back-end của máy:
+
     cinder-manage host list
+    
+<img src=http://i.imgur.com/XOodQun.png width="60%" height="60%" border="1">
 
 - Thực hiện lệnh sau để kiểm tra xem volume nằm trên máy nào:
 
-    cinder show <ID>
+    cinder show <ID_Volume>
+    
+<img src=http://i.imgur.com/Zz0dGFr.png width="60%" height="60%" border="1">
   
-- Lệnh Migrate volume giữa các máy\
+- Lệnh Migrate volume giữa các máy
 
-  cinder migrate <ID_volume> <host>
+    cinder migrate <ID_volume> <host>
+    
+- Sử dụng cinder show <ID_Volume> để xem trạng thái migrating:
 
-Chú ý: 
+<img src=http://i.imgur.com/plOubvl.png width="60%" height="60%" border="1">
+
+- Nếu hoàn thành migrating sẽ thay đổi tên host và nameID sẽ không còn là none nữa:
+
+<img src=http://i.imgur.com/vfc84Xt.png width="60%" height="60%" border="1">
+
+
+**Chú ý**: Quá trình migrate này chỉ áp dụng được với volume khi không gắn với máy ảo. Nếu volume gắn tới máy ảo thì sẽ xuất hiện dòng attaching ở volume mặc dù volume này đã được chuyển sang back-end khác. 
+
+
+# 3. Tài liệu tham khảo
+
+- http://www.server-world.info/en/note?os=Ubuntu_14.04&p=openstack_icehouse&f=18
+
+- http://docs.openstack.org/admin-guide-cloud/content/volume-migration.html
 
 
 
