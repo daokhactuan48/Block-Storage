@@ -86,14 +86,57 @@ b. Thông tin bài lab:
   
   - Back-end sử dụng là LVM
   - Một máy cài openstack all in one và một máy cài cinder-volume. 
+  - Ubuntu 14.04
+  - Máy cài cinder-volume phải add thêm hard disk vào.
 
 c. Mô hình 
    
   <img src=http://i.imgur.com/cpHAiYI.jpg width="60%" height="60%" border="1">
   
 d. Các bước cài đặt
-   
-   
+
+###### Cài đặt trên Openstack trên 1 node
+B1: Cài đặt Openstack AIO theo link sau: https://github.com/vietstacker/icehouse-aio-ubuntu14.04.
+
+###### Cài đặt Cinder-volume trên máy volume 
+B2: Cài đặt LVM và tạo volume group
+  
+    # apt-get install lvm2
+    # pvcreate /dev/sdb
+    # vgcreate cinder-volumes /dev/sdb
+
+B3: Cài đặt các gói Cinder-volume
+
+    # apt-get install cinder-volume
+
+B4: Cấu hình file sau: /etc/cinder/cinder.conf
+
+    osapi_volume_listen = 0.0.0.0
+    osapi_volume_listen_port = 8776
+    glance_host = 10.10.10.24
+    glance_port = 9292
+    iscsi_ip_address = 10.10.10.18
+    iscsi_port = 3260
+    rpc_backend = cinder.openstack.common.rpc.impl_kombu
+    rabbit_host = 10.10.10.24
+    rabbit_port = 5672
+    rabbit_userid = guest
+    rabbit_password = RABBIT_PASS
+    [database]
+    connection = mysql://cinder:CINDER_DBPASS@10.10.10.24/cinder
+    [keystone_authtoken]
+    auth_host = 10.10.10.24
+    auth_port = 35357
+    auth_protocol = http
+    admin_tenant_name = service
+    admin_user = cinder
+    admin_password = CINDER_PASS
+
+Chú ý: 
+CINDER_DBPASS: là pass của cinder trên database
+CINDER_PASS: pass của user cinder trong keystone
+RABBIT_PASS: pass của RABIIT
+
 
 
 
