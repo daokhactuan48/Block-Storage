@@ -36,8 +36,10 @@ Block-Storage
    
     nova volume-attach <ID_VM> <ID_Volume>
     
-  ID_VM: ID của máy ảo muốn attach volume vào
-  ID_Volume: ID của volume 
+  
+ID_VM: ID của máy ảo muốn attach volume vào
+  
+ID_Volume: ID của volume 
   
    2.2.2. Lệnh Detach volume vào máy ảo
    
