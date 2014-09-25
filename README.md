@@ -71,6 +71,10 @@ Block-Storage
    
   - Trong Openstack có khả năng di chuyển volume từ giữa các back-end
   
+Tại sao phải dùng migrate volume:
+
+  - Khi một storage chuẩn bị có lỗi xảy ra ta có thể di chuyển volume trên storage này sang storage khác để đảm bảo tính an toàn cho các volume. 
+
 Có 2 trường hợp của volume:
 
   - Volume ko được attach vào máy ảo.
