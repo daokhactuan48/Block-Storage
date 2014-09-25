@@ -167,7 +167,7 @@ e. Tiến hành Migrate volume giữa các máy
 
 <img src=http://i.imgur.com/plOubvl.png width="60%" height="60%" border="1">
 
-- Nếu hoàn thành migrating sẽ thay đổi tên host và nameID sẽ không còn là none nữa:
+- Nếu hoàn thành migrating sẽ thay đổi tên host và name_id sẽ không còn là none nữa:
 
 <img src=http://i.imgur.com/vfc84Xt.png width="60%" height="60%" border="1">
 
