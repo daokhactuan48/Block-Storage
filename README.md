@@ -133,6 +133,7 @@ B4: Cấu hình file sau: /etc/cinder/cinder.conf
     admin_password = CINDER_PASS
 
 Chú ý: 
+
 CINDER_DBPASS: là pass của cinder trên database
 
 CINDER_PASS: pass của user cinder trong keystone
